@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<label for="n">Insert digit to see its Fibonacci's equivalent</label>
+<input type="text" id="n">
+<input type="submit" onclick="Script3()" value="Check">
+<div id="Script3result"></div>
+<script>
+    function Script3() {
+        var first = 0;
+        var second = 1;
+        var suma;
+        var n = document.getElementById("n").value;
+        for (var i = 2; i <= n; i++) {
+            suma = first + second;
+            first = second;
+            second = suma;
+        }
+        Script3result.innerHTML = suma;
+    }
+</script>
+</body>
+</html>
